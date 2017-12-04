@@ -2749,6 +2749,7 @@ class MessageHydrationTest(ZulipTestCase):
 
         self.assertIn('class="user-mention"', new_message['content'])
         self.assertEqual(new_message['flags'], ['mentioned'])
+
 class OctopusTest(ZulipTestCase):
 	 
     def test_change_welcome_message(self) -> None:
