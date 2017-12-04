@@ -58,7 +58,7 @@ from zerver.lib.actions import (
     do_create_user,
     get_client,
     do_add_alert_words,
-	check_send_message,
+    check_send_message,
 )
 
 from zerver.lib.upload import create_attachment
