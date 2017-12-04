@@ -1641,8 +1641,12 @@ def check_send_message(sender, client, message_type_name, message_to,
         message_type_name,
         message_to,
         topic_name)
-
-
+    print(client)
+    print(sender)
+    print(message_type_name)
+    print(message_to)
+    print(topic_name)
+    print(message_content)
     if message_content == "welcome":
         message_content = "Welcome to Zulip :octopus:"
 
@@ -1650,12 +1654,7 @@ def check_send_message(sender, client, message_type_name, message_to,
                             message_content, realm, forged, forged_timestamp,
                             forwarder_user_profile, local_id, sender_queue_id)
     return do_send_messages([message])[0]
-print(client)
-print(sender)
-print(message_type_name)
-print(message_to)
-print(topic_name)
-print(message_content)
+
 def check_stream_name(stream_name: Text) -> None:
     if stream_name.strip() == "":
         raise JsonableError(_("Invalid stream name '%s'" % (stream_name)))
