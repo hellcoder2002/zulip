@@ -1628,6 +1628,8 @@ def check_send_private_message(sender: UserProfile, client: Client,
 
 # check_send_message:
 # Returns the id of the sent message.  Has same argspec as check_message.
+
+
 def check_send_message(sender, client, message_type_name, message_to,
                        topic_name, message_content, realm=None, forged=False,
                        forged_timestamp=None, forwarder_user_profile=None, local_id=None,
