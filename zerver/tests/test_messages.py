@@ -15,8 +15,7 @@ from zerver.lib.actions import (
     do_send_messages,
     get_active_presence_idle_user_ids,
     get_user_info_for_message_updates,
-    internal_send_private_message,
-	
+    internal_send_private_message,	
 )
 
 from zerver.lib.message import (
@@ -2751,8 +2750,7 @@ class MessageHydrationTest(ZulipTestCase):
         self.assertEqual(new_message['flags'], ['mentioned'])
 
 class OctopusTest(ZulipTestCase):
-	 
-    def test_change_welcome_message(self) -> None:
+	def test_change_welcome_message(self) -> None:
         sender = get_user('iago@zulip.com', get_realm('zulip'))
         client = make_client(name="test suite")
         message_id = check_send_message(sender, client, "stream", ["Verona"], "Zulip Octopus test", "welcome")
@@ -2767,3 +2765,4 @@ class OctopusTest(ZulipTestCase):
         self.assertEqual(
             Message.objects.values_list("content", flat=True).get(id=message_id),
             "Welcome everyone!")
+        
