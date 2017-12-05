@@ -2762,4 +2762,4 @@ class OctopusTest(ZulipTestCase):
         sender = get_user('iago@zulip.com', get_realm('zulip'))
         client = make_client(name="test suite")
         message_id = check_send_message(sender, client, "stream", ["Verona"], "Zulip Octopus test", "Welcome everyone!")
-        self.assertEqual(Message.objects.values_list("content", flat=True).get(id=message_id),"Welcome everyone!")
+        self.assertEqual(Message.objects.values_list("content", flat=True).get(id=message_id), "Welcome everyone!")
