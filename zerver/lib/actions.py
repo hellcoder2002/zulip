@@ -1,9 +1,4 @@
-
-def internal_prep_stream_message(realm: Realm, sender: UserProfile,
-                                 from typing import (
-    AbstractSet, Any, AnyStr, Callable, Dict, Iterable, List, Mapping, MutableMapping,
-    Optional, Sequence, Set, Text, Tuple, TypeVar, Union, cast
-)
+from typing import (AbstractSet, Any, AnyStr, Callable, Dict, Iterable, List, Mapping, MutableMapping,Optional, Sequence, Set, Text, Tuple, TypeVar, Union, cast)
 from mypy_extensions import TypedDict
 
 import django.db.utils
