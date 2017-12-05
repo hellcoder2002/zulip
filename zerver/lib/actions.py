@@ -1,4 +1,4 @@
-from typing import (AbstractSet, Any, AnyStr, Callable, Dict, Iterable, List, Mapping, MutableMapping,Optional, Sequence, Set, Text, Tuple, TypeVar, Union, cast)
+from typing import (AbstractSet, Any, AnyStr, Callable, Dict, Iterable, List, Mapping, MutableMapping, Optional, Sequence, Set, Text, Tuple, TypeVar, Union, cast)
 from mypy_extensions import TypedDict
 
 import django.db.utils
@@ -1853,7 +1853,9 @@ def _internal_prep_message(realm: Realm,
         logging.exception(u"Error queueing internal message by %s: %s" % (sender.email, e))
 
     return None
-stream_name: Text, topic: Text,
+
+def internal_prep_stream_message:
+    (realm: Realm, sender: UserProfile,stream_name: Text, topic: Text,
                                  content: Text) -> Optional[Dict[str, Any]]:
     """
     See _internal_prep_message for details of how this works.
