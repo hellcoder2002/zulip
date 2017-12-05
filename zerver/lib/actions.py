@@ -6,7 +6,7 @@ def internal_prep_stream_message(realm: Realm, sender: UserProfile,
 )
 from mypy_extensions import TypedDict
 
-     import django.db.utils
+import django.db.utils
 from django.contrib.contenttypes.models import ContentType
 from django.utils.html import escape
 from django.utils.translation import ugettext as _
