@@ -1,10 +1,12 @@
-from typing import (
+
+def internal_prep_stream_message(realm: Realm, sender: UserProfile,
+                                 from typing import (
     AbstractSet, Any, AnyStr, Callable, Dict, Iterable, List, Mapping, MutableMapping,
     Optional, Sequence, Set, Text, Tuple, TypeVar, Union, cast
 )
 from mypy_extensions import TypedDict
 
-import django.db.utils
+     import django.db.utils
 from django.contrib.contenttypes.models import ContentType
 from django.utils.html import escape
 from django.utils.translation import ugettext as _
@@ -1856,9 +1858,7 @@ def _internal_prep_message(realm: Realm,
         logging.exception(u"Error queueing internal message by %s: %s" % (sender.email, e))
 
     return None
-
-def internal_prep_stream_message(realm: Realm, sender: UserProfile,
-                                 stream_name: Text, topic: Text,
+stream_name: Text, topic: Text,
                                  content: Text) -> Optional[Dict[str, Any]]:
     """
     See _internal_prep_message for details of how this works.
