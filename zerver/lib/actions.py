@@ -1641,14 +1641,9 @@ def check_send_message(sender, client, message_type_name, message_to,
         message_type_name,
         message_to,
         topic_name)
-    print(client)
-    print(sender)
-    print(message_type_name)
-    print(message_to)
-    print(topic_name)
-    print(message_content)
     
-    message_content = "Welcome to Zulip :octopus:"
+    if message_content == "welcome":
+        message_content = "Welcome to Zulip :octopus:"
 
     message = check_message(sender, client, addressee,
                             message_content, realm, forged, forged_timestamp,
