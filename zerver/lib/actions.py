@@ -1854,8 +1854,8 @@ def _internal_prep_message(realm: Realm,
 
     return None
 
-def internal_prep_stream_message
-    (realm: Realm, sender: UserProfile,stream_name: Text, topic: Text,
+def internal_prep_stream_message(realm: Realm, sender: UserProfile,
+                                 stream_name: Text, topic: Text,
                                  content: Text) -> Optional[Dict[str, Any]]:
     """
     See _internal_prep_message for details of how this works.
@@ -1868,6 +1868,7 @@ def internal_prep_stream_message
         addressee=addressee,
         content=content,
     )
+
 
 def internal_prep_private_message(realm: Realm,
                                   sender: UserProfile,
